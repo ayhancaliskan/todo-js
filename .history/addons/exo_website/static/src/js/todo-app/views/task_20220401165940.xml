@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<templates xml:space="preserve">
+    <t t-name="exo_website.task">
+        <!-- <t t-foreach="widget.arrayTask" t-as="task"> -->
+            <li class="list-group-item d-flex justify-content-between">
+                <t t-esc="widget.task.value"></t>
+                <div class="action">
+                    <button t-att-data-task_id="widget.task_id" class="btn btn-success">V</button>
+                    <button class="btn btn-primary">E</button>
+                    <button class="btn btn-danger">X</button>
+                </div>
+            </li>
+        <!-- </t> -->
+    </t>
+</templates>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="website_todo_page" name="Actor">
+        <t t-call="website.layout">
+            <div class="todo-app container">
+                <h3 class="my-3 text-center">Todo list : </h3>
+                <div class="row">
+                    <div class="col-10 mx-auto">
+                        <form action="/" method="post">
+                            <div class="form-row align-items-center justify-content-center">
+                                <div class="col-10 my-1">
+                                    <label class="sr-only" for="totoapp">Tâches ?</label>
+                                    <input name="todo" type="text" class="form-control" id="totoapp" placeholder="Manger des frites ? " />
+                                </div>
+                                <div class="col-2 my-1">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="list-todo">
+
+                </div>
+            </div>
+
+        </t>
+    </template>
+</odoo>

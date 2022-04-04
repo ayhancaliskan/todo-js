@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<templates xml:space="preserve">
+    <t t-name="exo_website.task">
+        <li class="list-group-item d-flex justify-content-between" t-attf-class="{{widget.task.val &amp;&amp; 'bg-danger'  ''}}" >
+            <t t-esc="widget.task.value"></t>
+            <div class="action">
+                <t t-if="widget.task.val">
+                    <button t-att-data-task_id="widget.task.id" class="btn btn-warning validate">Ann.</button>
+                </t>
+                <t t-else="">
+                    <button t-att-data-task_id="widget.task.id" class="btn btn-success validate">V</button>
+                    <button class="btn btn-primary">E</button>
+                    <button class="btn btn-danger">X</button>
+                </t>
+            </div>
+        </li>
+    </t>
+</templates>

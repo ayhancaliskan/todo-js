@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<templates xml:space="preserve">
+    <t t-name="exo_website.task">
+        <li class="list-group-item d-flex justify-content-between">
+            <t t-esc="widget.task.value"></t>
+            <div class="action">
+                <t>
+                <button t-att-data-task_id="widget.task.id" class="btn btn-success validate">Ann.</button>
+
+                </t>
+                <button t-att-data-task_id="widget.task.id" class="btn btn-success validate">V</button>
+                <t t-if="widget.task.val == false">
+                    <button class="btn btn-primary">E</button>
+                    <button class="btn btn-danger">X</button>
+                </t>
+            </div>
+        </li>
+    </t>
+</templates>

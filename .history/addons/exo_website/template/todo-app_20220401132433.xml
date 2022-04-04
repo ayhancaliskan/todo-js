@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="website_todo_page" name="Actor">
+        <t t-call="website.layout">
+            <div class="todo-app container">
+                <h3 class="my-5">Todo list : </h3>
+
+            </div>
+           
+        </t>
+    </template>
+</odoo>

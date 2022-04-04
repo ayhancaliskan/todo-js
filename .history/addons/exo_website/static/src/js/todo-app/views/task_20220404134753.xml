@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<templates xml:space="preserve">
+    <t t-name="exo_website.task">
+        <li t-attf-class="list-group-item d-flex justify-content-between {{widget.task.val ? 'bg-success' : ''}}" >
+            <t t-if="!widget.task.edit">
+                <span class="value">
+
+                </span>
+                <t t-esc="widget.task.value"></t>
+            </t>
+            <t t-else="">
+                <div>
+                    <input placeholder="?" t-att-value="widget.task.value" type="text" class="form-control new-task"/>
+                </div>
+            </t>
+            <div class="action">
+                <t t-if="widget.task.val">
+                    <button t-att-data-task_id="widget.task.id" class="btn btn-warning validate">Ann.</button>
+                </t>
+                <t t-elif="widget.task.edit">
+                    <button class="btn btn-primary">Edit.</button>
+                </t>
+                <t t-else="">
+                    <button t-att-data-task_id="widget.task.id" class="btn btn-success validate">V</button>
+                    <button class="btn btn-primary">E</button>
+                    <button class="btn btn-danger">X</button>
+                </t>
+            </div>
+        </li>
+    </t>
+</templates>

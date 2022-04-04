@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="website_todo_page" name="Actor">
+        <t t-call="website.layout">
+            <div class="todo-app container">
+                <h3 class="my-3 text-center">Todo list : </h3>
+                <div class="app-actor-search-navbar">
+                    <div class="container ">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <form action="/" method="post">
+                                    <div class="form-row align-items-center">
+                                        <div class="col-sm-3 my-1">
+                                            <label class="sr-only" for="inlineFormInputName">Name</label>
+                                            <input name="actor_name" type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe" />
+                                        </div>
+
+                                        <div class="col-auto my-1">
+                                            <label class="mr-sm-2 sr-only" for="search-film">Type of films</label>
+                                            <select name="type_of_film" class="custom-select mr-sm-2 search-film" id="search-film" />
+                                        </div>
+                                        <div class="col-auto my-1">
+                                            <button type="submit" class="btn btn-primary">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </t>
+    </template>
+</odoo>

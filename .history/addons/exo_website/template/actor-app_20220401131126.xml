@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="website_actor_page" name="Actor">
+        <t t-call="website.layout">
+            <h3 class="my-5">Exercice Actor : </h3>
+            <div class="container app-actor">
+                <div class="row mb-5">
+                    <div class="col-8 left-zone">
+
+                    </div>
+
+                    <div class="col-4 right-zone">
+
+                    </div>
+                </div>
+
+            </div>
+        </t>
+    </template>
+</odoo>

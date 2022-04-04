@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="mac_website_assets_frontend" inherit_id="web.assets_frontend">
+         <!-- <xpath expr="//link[last()]" position="after">
+        </xpath> -->
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/exo_website/static/src/js/app-actor/app.js" />
+        </xpath>
+    </template>
+</odoo>

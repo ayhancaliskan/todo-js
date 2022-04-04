@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<templates xml:space="preserve">
+    <t t-name="exo_website.task">
+        <t t-foreach="widget.arrayTask" t-as="task">
+            <li class="list-group-item">
+                <t t-esc="task.value"></t>
+                <button>V</button>
+                <button>E</button>
+                <button>E</button>
+
+
+            </li>
+        </t>
+    </t>
+</templates>

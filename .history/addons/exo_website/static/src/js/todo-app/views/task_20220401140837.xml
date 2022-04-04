@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="exo_website.actorsTable">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <!-- <th scope="col" style="width:120px;"></th> -->
+                    <th scope="col">Name</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <t t-foreach="widget.actors" t-as="actor">
+                    <tr>
+                        <td>
+                            <t t-esc="actor.id" />
+                        </td>
+                        <!-- <td>
+                            <img class="img-fluid" t-att-src="'/web/image/res.partner/' + actor.id + '/image'" />
+                        </td> -->
+                        <td>
+                            <a class="contact-info" t-att-data-actor_id="actor.id" href="#">
+                                <t t-esc="actor.name" />
+                            </a>
+                            <br />
+                            <t t-if="actor.phone">
+                                <strong>Phone:</strong>
+                                <span>
+                                    <t t-esc="actor.phone" />
+                                </span>
+                                <br />
+                            </t>
+                            <t t-if="actor.email">
+                                <strong>Email:</strong>
+                                <span>
+                                    <a t-att-href="'mailto:' + actor.email">
+                                        <t t-esc="actor.email" />
+                                    </a>
+                                </span>
+                                <br />
+                            </t>
+                        </td>
+                        <td class="text-right">
+                            <a class="btn btn-info btn-sm edit-contact" t-att-data-actor_id="actor.id" href="#">Edit</a>
+                            <a class="btn btn-danger btn-sm remove-contact" t-att-data-actor_id="actor.id" href="#">Remove</a>
+                        </td>
+                    </tr>
+                </t>
+            </tbody>
+        </table>
+    </t>
+
+</templates>
