@@ -26,17 +26,24 @@ odoo.define("exo_website.add_task", function (require) {
     // },
 
     _taskValidation: function (ev) {
-      let self = this;
+      let self = this
       self.task.val = !self.task.val;
       self.renderElement();
     },
     _removeTask: function () {
-      this.parent.tasks.splice( $.inArray(this, this.parent.tasks), 1 );   // logique pour supp dans le tasks du parent afin de garder une cohérence dans l'application
-      this.destroy();
+      // var result = dialog.safeConfirm();
+      // console.log(result);
+      // if (dialog.safeConfirm()) {
+      //   console.log('test');
+      // }
+      console.log(this.parent.tasks);
+        this.destroy();
+        this.parent.tasks
+        this.destroy();
 
     },
     _editTask: function () {
-      var self = this;
+      var self = this
       if (self.task.edit) {
         self.task.value = self.$(".new-task")[0].value;
       }

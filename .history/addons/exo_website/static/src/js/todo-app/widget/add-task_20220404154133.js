@@ -31,9 +31,20 @@ odoo.define("exo_website.add_task", function (require) {
       self.renderElement();
     },
     _removeTask: function () {
-      this.parent.tasks.splice( $.inArray(this, this.parent.tasks), 1 );   // logique pour supp dans le tasks du parent afin de garder une cohérence dans l'application
-      this.destroy();
+      // var result = dialog.safeConfirm();
+      // console.log(result);
+      // if (dialog.safeConfirm()) {
+      //   console.log('test');
+      // }
+      console.log(this.parent.tasks);
+      console.log(this.id);
+      var target = $(ev.target); // chop le target (btn -> balise a avec l'attribut 'data')
+      var actor_id = parseInt(target.data("actor_id"), 10); // chop l'ID via l'attribut data mis dans le xml
 
+      var actor = _.where(this.actors, { id: actor_id }); //where(undescorejs)
+
+      this.parent.tasks;
+      this.destroy();
     },
     _editTask: function () {
       var self = this;
